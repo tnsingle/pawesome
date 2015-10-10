@@ -3,8 +3,9 @@
 </head>
 
 <body>
-	<header>
-		{{> loginButtons}}
+	<header class="headerLoginBar">
+        <div class="logo"><span class="paw">paw</span>esome parks</div>
+		<div class="loginName">{{> loginButtons}}</div>
 	</header>
   	<div id="container">
   		<div id="leftWell">
@@ -27,12 +28,18 @@
 </body>
 
 <template name="dogProfile">
-  {{name}}
-  {{age}}
-  {{image}}
-  {{likes}}
-  {{dislikes}}
-  {{#if image}}
-  	<img src="{{image}}"/>
-  {{/if}}
+      <div class="profileImg">{{#if image}}
+  	<img class="" src="{{image}}"/>
+          {{/if}}</div>
+    <br>
+    <div class="profileInfo"><h2 class="dogName">{{name}}</h2>
+  <div class="infoBold">Age: </div>
+        <div class="infoAnswer">{{age}}</div>
+    <br>
+  <div class="infoBold">Likes: </div>
+        <div class="infoAnswer">{{likes}}</div>
+    <br>
+  <div class="infoBold">Disslikes: </div>
+        <div class="infoAnswer">{{dislikes}}</div>
+    </div>
 </template>
