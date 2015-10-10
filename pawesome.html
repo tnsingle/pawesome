@@ -1,0 +1,38 @@
+<head>
+  <title>pawesome</title>
+</head>
+
+<body>
+	<header>
+		{{> loginButtons}}
+	</header>
+  	<div id="container">
+  		<div id="leftWell">
+  			<div class="map">
+  			</div>
+  			{{#if currentUser}}
+         		<div class="userInfo">
+         			{{#each currentUser.profile.dogs}}
+         				{{> dogProfile}}
+         			{{else}}
+         				No dogs!
+     				{{/each}}
+         		</div>
+      		{{/if}}
+  		</div>
+  		<div id="rightWell">
+  		</div>
+  	</div>
+
+</body>
+
+<template name="dogProfile">
+  {{name}}
+  {{age}}
+  {{image}}
+  {{likes}}
+  {{dislikes}}
+  {{#if image}}
+  	<img src="{{image}}"/>
+  {{/if}}
+</template>
