@@ -19,6 +19,12 @@ var paw = {
         }
       });
 
+      Template.dogProfile.helpers({
+        currentPark : function(dog){
+          return "none";
+        }
+      });
+
       Accounts.ui.config({
         passwordSignupFields: "USERNAME_ONLY"
       });
@@ -27,7 +33,7 @@ var paw = {
     if(Meteor.isServer){
       Meteor.startup(function () {
         paw.spoofer.generateObjects(FakeDogs, "dogs");
-        //paw.spoofer.generateObjects(FakeParks, "parks");
+        paw.spoofer.generateObjects(FakeParks, "parks");
       });
       
     }
@@ -56,6 +62,10 @@ var paw = {
           dislikes: "cats, trees",
           image: "http://www.dogbreedinfo.com/images24/BeagleBayleePurebredDogs8Months2.jpg",
           owner: Meteor.user()._id,
+          checkIn: {
+            latitude: null,
+            longitude: null
+          }
 
         }
 
@@ -92,16 +102,20 @@ var paw = {
     init : function(divId){
       var success = false;
       navigator.geolocation.getCurrentPosition(function(position){
+          var lat = position.coords.latitude;
+          var lon = position.coords.longitude
           L.mapbox.accessToken = 'pk.eyJ1IjoidG5zaW5nbGUiLCJhIjoiY2lmbHVpYmZpZm80bnNlbTcxbWJ1ZzBydyJ9.TF4-8iEqdwgSPKIembmNrw';
-        L.mapbox.map(divId, 'tnsingle.cifluiaagfoh8rylxcx6xc3w7').setView([position.coords.latitude,position.coords.longitude], 14);
+          L.mapbox.map(divId, 'tnsingle.cifluiaagfoh8rylxcx6xc3w7', {scrollWheelZoom: false}).setView([lat,lon], 14);
 
-        sucess = true;
-        },
-        function(){
-          console.log("nope");
-        });
+          Meteor.users.update({_id:Meteor.user()._id}, { $set: {'profile.checkIn': {'latitude' : lat,'longitude' : lon}} });
 
-      return success;
+          success = true;
+          },
+          function(){
+            console.log("nope");
+          });
+
+        return success;
     }
 
     
