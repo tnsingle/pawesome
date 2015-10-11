@@ -1,0 +1,85 @@
+{
+	"dogs": [
+		{
+        "name": "Bo",
+        "age": 7,
+        "breed": "German Shepard",
+        "likes": "children, strangers",
+        "dislikes": "smaller dogs",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Jordan Williams"
+      },{
+        "name": "Lassie",
+        "age": 1,
+        "breed": "Pomeranian",
+        "likes": "frisbee",
+        "dislikes": "large dogs",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Alice Wrinkle"
+      },{
+        "name": "Toy",
+        "age": 1,
+        "breed": "Mutt",
+        "likes": "children, playing catch, sleeping",
+        "dislikes": "cats",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Britt Neek"
+      },{
+        "name": "Mooshoe",
+        "age": 3,
+        "breed": "Chow",
+        "likes": "bacon, sneezing",
+        "dislikes": "baths",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Hank Token"
+      },{
+        "name": "Daisy",
+        "age": 6,
+        "breed": "German Shepard",
+        "likes": "fetch, naps",
+        "dislikes": "sirens, vacuums",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Tony Becker"
+      },{
+        "name": "Princess",
+        "age": 12,
+        "breed": "Poodle",
+        "likes": "ice cubes, naps",
+        "dislikes": "males, puppies",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Jason Hugh"
+      },{
+        "name": "Buddy",
+        "age": 3,
+        "breed": "Mutt",
+        "likes": "fetch",
+        "dislikes": "children",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Wilson Jefferies"
+      },{
+        "name": "Toby",
+        "age": 9,
+        "breed": "Golden Retriever",
+        "likes": "children, food (anything)",
+        "dislikes": "smaller dogs",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Morgan Freeman"
+      },{
+        "name": "Koi",
+        "age": 7,
+        "breed": "Pug",
+        "likes": "belly rubs, cuddling",
+        "dislikes": "puppies",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Seth Rogan"
+      },{
+        "name": "Ruby",
+        "age": 2,
+        "breed": "Golden Doodle",
+        "likes": "children, fetch",
+        "dislikes": "smaller dogs",
+        "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
+        "owner": "Ashley Davidson"
+      }
+	]
+}
