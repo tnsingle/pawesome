@@ -1,4 +1,5 @@
 FakeDogs = new Mongo.Collection("dogs");
+FakeParks = new Mongo.Collection("parks");
 
 var paw = {
   init : function(){
@@ -25,7 +26,8 @@ var paw = {
 
     if(Meteor.isServer){
       Meteor.startup(function () {
-        paw.spoofer.generateUsers(FakeDogs);
+        paw.spoofer.generateObjects(FakeDogs, "dogs");
+        //paw.spoofer.generateObjects(FakeParks, "parks");
       });
       
     }
@@ -60,26 +62,27 @@ var paw = {
       ];
       return data;
     },
-    generateUsers : function(collection){
-      var count = FakeDogs.find().count();
+    generateObjects : function(collection, objName){
+      var count = collection.find().count();
+      var file = objName + ".json";
 
       //console.log(count);
 
-      if (count > 0) FakeDogs.remove({}); // undoing previous code
+      if (count > 0) collection.remove({}); // undoing previous code
 
-      Assets.getText('dogs.json', function(err, data) {
+      Assets.getText(file, function(err, data) {
         
         var json = EJSON.parse(data);
 
         //console.log(json);
 
-        var content = json['dogs'];
+        var content = json[objName];
 
         //console.log(content[0]);
 
         for(var i = 0; i < content.length; i++){
           //console.log(content[i]);
-          FakeDogs.insert(content[i]);
+          collection.insert(content[i]);
         }
 
       });

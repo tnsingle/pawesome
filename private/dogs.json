@@ -7,7 +7,11 @@
         "likes": "children, strangers",
         "dislikes": "smaller dogs",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Jordan Williams"
+        "owner": "Jordan Williams",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Lassie",
         "age": 1,
@@ -15,7 +19,11 @@
         "likes": "frisbee",
         "dislikes": "large dogs",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Alice Wrinkle"
+        "owner": "Alice Wrinkle",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Toy",
         "age": 1,
@@ -23,15 +31,23 @@
         "likes": "children, playing catch, sleeping",
         "dislikes": "cats",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Britt Neek"
+        "owner": "Britt Neek",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Mooshoe",
         "age": 3,
         "breed": "Chow",
-        "likes": "bacon, sneezing",
+        "likes": "bacon, outside",
         "dislikes": "baths",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Hank Token"
+        "owner": "Hank Token",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Daisy",
         "age": 6,
@@ -39,7 +55,11 @@
         "likes": "fetch, naps",
         "dislikes": "sirens, vacuums",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Tony Becker"
+        "owner": "Tony Becker",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Princess",
         "age": 12,
@@ -47,7 +67,11 @@
         "likes": "ice cubes, naps",
         "dislikes": "males, puppies",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Jason Hugh"
+        "owner": "Jason Hugh",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Buddy",
         "age": 3,
@@ -55,7 +79,11 @@
         "likes": "fetch",
         "dislikes": "children",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Wilson Jefferies"
+        "owner": "Wilson Jefferies",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Toby",
         "age": 9,
@@ -63,7 +91,11 @@
         "likes": "children, food (anything)",
         "dislikes": "smaller dogs",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Morgan Freeman"
+        "owner": "Morgan Freeman",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Koi",
         "age": 7,
@@ -71,7 +103,11 @@
         "likes": "belly rubs, cuddling",
         "dislikes": "puppies",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Seth Rogan"
+        "owner": "Seth Rogan",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       },{
         "name": "Ruby",
         "age": 2,
@@ -79,7 +115,11 @@
         "likes": "children, fetch",
         "dislikes": "smaller dogs",
         "image": "https://openclipart.org/image/2400px/svg_to_png/166603/DogProfile.png",
-        "owner": "Ashley Davidson"
+        "owner": "Ashley Davidson",
+        "coordinates" : {
+        	"longitude" : null,
+        	"latitude" : null
+        }
       }
 	]
 }

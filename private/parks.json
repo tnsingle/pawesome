@@ -1,0 +1,10 @@
+{
+	"parks": [
+		{
+        "name": "Park at Van Dusen",
+        "coordinates" : {
+        	"longitude" : 39.104234,
+        	"latitude" : -76.875694
+        }
+	]
+}
