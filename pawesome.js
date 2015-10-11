@@ -14,8 +14,24 @@ var paw = {
         friends: function () {
           return FakeDogs.find();
         },
+        activeFriends : function(){
+          return FakeDogs.find({checkIn: {$ne: null}});
+        },
+        inactiveFriends : function(){
+          return FakeDogs.find({checkIn: null});
+        },
         mapLoaded : function(){
             return paw.map.init("paw-map");
+        }
+      });
+
+      Template.dogProfile.helpers({
+        currentPark : function(){
+          var park = FakeParks.findOne({coordinates: this.checkIn});
+          if(park)
+            return park.name;
+
+          return "none";
         }
       });
 
@@ -27,7 +43,7 @@ var paw = {
     if(Meteor.isServer){
       Meteor.startup(function () {
         paw.spoofer.generateObjects(FakeDogs, "dogs");
-        //paw.spoofer.generateObjects(FakeParks, "parks");
+        paw.spoofer.generateObjects(FakeParks, "parks");
       });
       
     }
@@ -56,6 +72,10 @@ var paw = {
           dislikes: "cats, trees",
           image: "http://www.dogbreedinfo.com/images24/BeagleBayleePurebredDogs8Months2.jpg",
           owner: Meteor.user()._id,
+          checkIn: {
+            "latitude" : 39.1040549,
+            "longitude" : -76.8772213
+          }
 
         }
 
@@ -92,16 +112,20 @@ var paw = {
     init : function(divId){
       var success = false;
       navigator.geolocation.getCurrentPosition(function(position){
+          var lat = position.coords.latitude;
+          var lon = position.coords.longitude
           L.mapbox.accessToken = 'pk.eyJ1IjoidG5zaW5nbGUiLCJhIjoiY2lmbHVpYmZpZm80bnNlbTcxbWJ1ZzBydyJ9.TF4-8iEqdwgSPKIembmNrw';
-        L.mapbox.map(divId, 'tnsingle.cifluiaagfoh8rylxcx6xc3w7').setView([position.coords.latitude,position.coords.longitude], 14);
+          L.mapbox.map(divId, 'tnsingle.cifluiaagfoh8rylxcx6xc3w7', {scrollWheelZoom: false}).setView([lat,lon], 14);
 
-        sucess = true;
-        },
-        function(){
-          console.log("nope");
-        });
+          //Meteor.users.update({_id:Meteor.user()._id}, { $set: {'profile.checkIn': {'latitude' : lat,'longitude' : lon}} });
 
-      return success;
+          success = true;
+          },
+          function(){
+            console.log("nope");
+          });
+
+        return success;
     }
 
     

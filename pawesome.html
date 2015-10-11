@@ -44,8 +44,13 @@
 			<div class="tab-content">
 			    <div id="activeDogs" class="tab-pane fade in active">
 			        <ul>
+<<<<<<< .merge_file_qQLNzF
 			        	{{#each friends}}
          					<li class=activeFeed>
+=======
+			        	{{#each activeFriends}}
+         					<li>
+>>>>>>> .merge_file_x5ZnWw
          						{{> dogProfile}}
                                 <button type="button" class="btn btn-default" aria-label="Left Align">
   <span class="" aria-hidden="true">On my way!</span>
@@ -56,7 +61,13 @@
                     
 			    </div>
 			    <div id="inactiveDogs" class="tab-pane fade">
-			        <p>No inactive dogs</p>
+			        <ul>
+			        	{{#each inactiveFriends}}
+         					<li>
+         						{{> dogProfile}}
+         					</li>
+	     				{{/each}}
+			        </ul>
 			    </div>
 			</div>
                                    		
@@ -77,4 +88,8 @@
   <div class="infoBold">Disslikes: </div>
         <div class="infoAnswer">{{dislikes}}</div>
     </div>
+    <p><i class="glyphicon glyphicon-map-marker"></i>Current park: 
+    	
+    	{{currentPark}}
+    </p>
 </template>
