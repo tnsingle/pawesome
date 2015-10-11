@@ -115,7 +115,7 @@ h2.dogName{
 .loginName{
     text-align: right;
     height:30px;
-    color: white !important;
+    color: white;
     text-decoration: none;
     right:10px;
     font-family: "Dosis", sans-serif, arial;
