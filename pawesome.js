@@ -14,13 +14,23 @@ var paw = {
         friends: function () {
           return FakeDogs.find();
         },
+        activeFriends : function(){
+          return FakeDogs.find({checkIn: {$ne: null}});
+        },
+        inactiveFriends : function(){
+          return FakeDogs.find({checkIn: null});
+        },
         mapLoaded : function(){
             return paw.map.init("paw-map");
         }
       });
 
       Template.dogProfile.helpers({
-        currentPark : function(dog){
+        currentPark : function(){
+          var park = FakeParks.findOne({coordinates: this.checkIn});
+          if(park)
+            return park.name;
+
           return "none";
         }
       });
@@ -63,8 +73,8 @@ var paw = {
           image: "http://www.dogbreedinfo.com/images24/BeagleBayleePurebredDogs8Months2.jpg",
           owner: Meteor.user()._id,
           checkIn: {
-            latitude: null,
-            longitude: null
+            "latitude" : 39.1040549,
+            "longitude" : -76.8772213
           }
 
         }
@@ -107,7 +117,7 @@ var paw = {
           L.mapbox.accessToken = 'pk.eyJ1IjoidG5zaW5nbGUiLCJhIjoiY2lmbHVpYmZpZm80bnNlbTcxbWJ1ZzBydyJ9.TF4-8iEqdwgSPKIembmNrw';
           L.mapbox.map(divId, 'tnsingle.cifluiaagfoh8rylxcx6xc3w7', {scrollWheelZoom: false}).setView([lat,lon], 14);
 
-          Meteor.users.update({_id:Meteor.user()._id}, { $set: {'profile.checkIn': {'latitude' : lat,'longitude' : lon}} });
+          //Meteor.users.update({_id:Meteor.user()._id}, { $set: {'profile.checkIn': {'latitude' : lat,'longitude' : lon}} });
 
           success = true;
           },

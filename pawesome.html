@@ -33,7 +33,7 @@
 			<div class="tab-content">
 			    <div id="activeDogs" class="tab-pane fade in active">
 			        <ul>
-			        	{{#each friends}}
+			        	{{#each activeFriends}}
          					<li>
          						{{> dogProfile}}
          					</li>
@@ -41,7 +41,13 @@
 			        </ul>
 			    </div>
 			    <div id="inactiveDogs" class="tab-pane fade">
-			        <p>No inactive dogs</p>
+			        <ul>
+			        	{{#each inactiveFriends}}
+         					<li>
+         						{{> dogProfile}}
+         					</li>
+	     				{{/each}}
+			        </ul>
 			    </div>
 			</div>
                                    		
