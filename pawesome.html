@@ -21,6 +21,25 @@
       		{{/if}}
   		</div>
   		<div id="rightWell">
+  			<ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="#activeDogs">Active</a></li>
+			    <li><a data-toggle="tab" href="#inactiveDogs">Inactive</a></li>
+			</ul>
+			<div class="tab-content">
+			    <div id="activeDogs" class="tab-pane fade in active">
+			        <ul>
+			        	{{#each friends}}
+         					<li>
+         						{{> dogProfile}}
+         					</li>
+	     				{{/each}}
+			        </ul>
+			    </div>
+			    <div id="inactiveDogs" class="tab-pane fade">
+			        <p>No inactive dogs</p>
+			    </div>
+			</div>
+                                   		
   		</div>
   	</div>
 
