@@ -24,21 +24,36 @@
      				{{/each}}
          		</div>
       		{{/if}}
+            <div class="about">
+                <div class="aboutHead">Find furry new friends for your dog</div>
+                <br>
+                    <div class="step">Step 1. Place the tag on your dog's collar.</div><p>When you take your dog to the park, this helps other owners know when you've arrived so they can bring their dog for a work out.</p>
+                <br>
+                <div class="step">Step 2. Fill out your dog's profile</div><p>Make it easy for other owners to get to know your dog by uploading a photo and explaining your fur-baby's likes and disslikes.</p>
+                <br>
+                <div class="step">Step 3. Follow your favorite pups</div><p>Following a dog enables you to receive a notification when that dog arrives at the park so you can be sure to get prime playing time with the dogs that wear out your dog. No more waiting at the park for another dog to play with, know before you go!</p>
+                <br>
+                <div class="step">Don't forget to:</div><br><p>Review and save your favorite parks – Find a park near you – Add a new park to the map</p>
+            </div>
   		</div>
   		<div id="rightWell">
   			<ul class="nav nav-tabs">
-			    <li class="active"><a data-toggle="tab" href="#activeDogs">Active</a></li>
-			    <li><a data-toggle="tab" href="#inactiveDogs">Inactive</a></li>
+			    <li class="active"><a data-toggle="tab" href="#activeDogs">Active Friends</a></li>
+			    <li><a data-toggle="tab" href="#inactiveDogs">Inactive Friends</a></li>
 			</ul>
 			<div class="tab-content">
 			    <div id="activeDogs" class="tab-pane fade in active">
 			        <ul>
 			        	{{#each friends}}
-         					<li>
+         					<li class=activeFeed>
          						{{> dogProfile}}
+                                <button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="" aria-hidden="true">On my way!</span>
+</button>
          					</li>
 	     				{{/each}}
 			        </ul>
+                    
 			    </div>
 			    <div id="inactiveDogs" class="tab-pane fade">
 			        <p>No inactive dogs</p>
@@ -54,14 +69,11 @@
       <div class="profileImg">{{#if image}}
   	<img class="" src="{{image}}"/>
           {{/if}}</div>
-    <br>
     <div class="profileInfo"><h2 class="dogName">{{name}}</h2>
   <div class="infoBold">Age: </div>
         <div class="infoAnswer">{{age}}</div>
-    <br>
   <div class="infoBold">Likes: </div>
         <div class="infoAnswer">{{likes}}</div>
-    <br>
   <div class="infoBold">Disslikes: </div>
         <div class="infoAnswer">{{dislikes}}</div>
     </div>

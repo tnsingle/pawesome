@@ -32,14 +32,30 @@ div{
 	flex-wrap: wrap;
     padding-top: 1em;
 }
+.titles{
+    width:100%;
+    padding: 0 20px 0 2.3em;
+}
 
+.headText{
+    font-family: "Dosis", sans-serif, arial;
+    font-size: 24px;
+    padding:1em 0 0.6em 0;
+}
 #leftWell, #rightWell{
 	flex: 1 100%;
+}
+a{
+ color:#00aced ;   
+}
+a:hover{
+ color:#FC5255  ; 
+    background-color: #402455 ;
 }
 
 .map{
 	width: 100%;
-	height: 50vh;
+	height: 70vh;
 	min-height: 200px;
 	background: #ccc;
 	border: 1px solid #333;
@@ -48,10 +64,30 @@ div{
 
 h2.dogName{
     font-size: 40px;   
-    margin: 0.5em 0 0.3em 0 !important;
+/*    margin: 0.5em 0 0.3em 0 !important;*/
     color:#402455;
     font-family: "Dosis", sans-serif, arial;
 /*    float:right;*/
+}
+#activeDogs .profileInfo{
+    text-align: left;
+    width:50%;
+    display:inline-block;
+    padding-bottom: 40px;
+}
+
+#activeDogs .profileImg{
+    margin: auto;
+}
+
+.activeFeed{
+    border-bottom: 1px solid #dbdbdb;   
+    
+}
+
+.btn {
+    margin-left:10px;  
+    margin-bottom: 10px;
 }
 
 .logo{
@@ -79,13 +115,19 @@ h2.dogName{
 .loginName{
     text-align: right;
     height:30px;
-    color: white;
+    color: white !important;
     text-decoration: none;
     right:10px;
     font-family: "Dosis", sans-serif, arial;
         display:inline-flex;
     postion:relative;
     float:right;
+}
+.login-link-text{
+ color:white;   
+}
+.login-link-text:hover{
+ color:#FC5255;   
 }
 
 .profileInfo{
@@ -104,7 +146,7 @@ h2.dogName{
 
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 2.3em;
+/*    margin-bottom: 2.3em;*/
 }
 img {
     max-width:100%;
@@ -116,7 +158,7 @@ img {
 .infoAnswer{
     text-transform: capitalize;   
     font-family: "Dosis", sans-serif, arial;
-
+    padding-bottom: 10px;
 }
 
 .infoBold{
@@ -128,8 +170,44 @@ img {
     position: relative;
 }
 
+.about{
+ width:100%;   
+}
+.aboutHead{
+       
+    font-size:34px;
+    font-weight: 600;
+    font-family: "Dosis", sans-serif, arial;
+    text-transform: uppercase!important;
+    display:inline;
+    position: relative;
+    line-height: 34px;
+}
+
+.step{
+    font-size:24px;
+    font-weight: 200;
+    margin: 1em 0 0 0;
+    font-family: "Dosis", sans-serif, arial;
+    display:inline-block;
+/*    background-color: #402455 ;*/
+    color: #FC5255;
+/*    padding: 10px;*/
+/*    height: 50px;*/
+  vertical-align: middle;
+/*    position: relative;*/   
+}
+
+p{
+    font-size:16px;
+    font-weight: 200;
+    padding: 1em 0 0.5em 0;
+    font-family: "Dosis", sans-serif, arial;
+    display:inline-block; 
+}
+
 /* Large screens */
-@media all and (min-width: 800px) {
+@media all and (min-width: 800px) {    
 	#container{
     padding-right:2.3em;
 	}
@@ -142,5 +220,28 @@ img {
 		flex: 1;
 		padding-right: 10px;
 	}
+
 }
 
+
+/*Mobile Screens */
+@media all and (max-width: 800px) {
+        body{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    #container{
+padding: 20px;    }
+    
+    ul{
+     padding-right:20px;  
+    }
+/*
+        
+    .headerLoginBar{
+        padding: 0;
+        margin: 0;
+    }
+*/
+}
