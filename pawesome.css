@@ -1,17 +1,42 @@
 /* CSS declarations go here */
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,300,500,700);
+
+*{
+ padding:0;
+    margin:0;
+}
+body{
+/*    background-color: #FC5255;*/
+}
+    
 div{
 	box-sizing: border-box;
+}
+
+#login-dropdown-list{
+    left:-160px;
+    top:30px;
+}
+
+#login-buttons{
+    margin-right:2.3em;   
+}
+
+.paw{
+ font-weight: 600;   
 }
 
 #container{
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+    padding-top: 1em;
+    padding-right:2.3em;
 }
 
 #leftWell{
 	width: 70%;
-	padding: 0 10px;
+	padding: 0 20px 0 2.3em;
 }
 
 #rightWell{
@@ -25,4 +50,89 @@ div{
 	height: 300px;
 	background: #ccc;
 	border: 1px solid #333;
+    margin-bottom: 2.3em;
 }
+
+h2.dogName{
+    font-size: 40px;   
+    margin: 0.5em 0 0.3em 0 !important;
+    color:#402455;
+    font-family: "Dosis", sans-serif, arial;
+/*    float:right;*/
+}
+
+.logo{
+    font-size: 35px;   
+    color:#FC5255;
+    display:inline-flex;
+    postion: absolute;
+    padding-left:1em;
+    font-family: "Dosis", sans-serif, arial;
+/*    float:right;*/
+}
+
+.headerLoginBar{
+    background-color: #402455;
+    padding-top: 15px;
+    width:100%;
+    height:56px;
+}
+
+.userInfo{
+    	display: flex;
+	flex-wrap: wrap;
+}
+
+.loginName{
+    text-align: right;
+    height:30px;
+    color: white;
+    text-decoration: none;
+    right:10px;
+    font-family: "Dosis", sans-serif, arial;
+        display:inline-flex;
+    postion:relative;
+    float:right;
+}
+
+.profileInfo{
+ color:#FC5255;   
+}
+
+.profileInfo{
+    padding-left:1em;
+}
+
+.profileImg{
+    min-width: 200px;
+    min-height: 200px;
+    width:23%;
+    height:15vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2.3em;
+    	display: flex;
+	flex-wrap: wrap;
+}
+img {
+    max-width:100%;
+    width:auto;
+    height:auto;
+    
+}
+
+.infoAnswer{
+    text-transform: capitalize;   
+    font-family: "Dosis", sans-serif, arial;
+
+}
+
+.infoBold{
+    font-size:14px;
+    font-weight: 600;
+    font-family: "Dosis", sans-serif, arial;
+    text-transform: uppercase!important;
+    display:inline;
+    position: relative;
+}
+
