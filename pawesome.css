@@ -31,19 +31,10 @@ div{
 	display: flex;
 	flex-wrap: wrap;
     padding-top: 1em;
-    padding-right:2.3em;
 }
 
 #leftWell, #rightWell{
 	flex: 1 100%;
-}
-
-#leftWell{
-	padding: 0 20px 0 2.3em;
-}
-
-#rightWell{
-	padding-right: 10px;
 }
 
 .map{
@@ -139,12 +130,17 @@ img {
 
 /* Large screens */
 @media all and (min-width: 800px) {
+	#container{
+    padding-right:2.3em;
+	}
 	#leftWell{
 		flex: 2;
+		padding: 0 20px 0 2.3em;
 	}
 
 	#rightWell{
 		flex: 1;
+		padding-right: 10px;
 	}
 }
 
