@@ -10,6 +10,9 @@ var paw = {
       Template.body.helpers({
         friends: function () {
           return FakeDogs.find({});
+        },
+        mapLoaded : function(){
+            return paw.map.init("paw-map");
         }
       });
 
@@ -136,6 +139,24 @@ var paw = {
         collection.insert(dog);
       });
     }
+  },
+  map : {
+    init : function(divId){
+      var success = false;
+      navigator.geolocation.getCurrentPosition(function(position){
+          L.mapbox.accessToken = 'pk.eyJ1IjoidG5zaW5nbGUiLCJhIjoiY2lmbHVpYmZpZm80bnNlbTcxbWJ1ZzBydyJ9.TF4-8iEqdwgSPKIembmNrw';
+        L.mapbox.map(divId, 'tnsingle.cifluiaagfoh8rylxcx6xc3w7').setView([position.coords.latitude,position.coords.longitude], 14);
+
+        sucess = true;
+        },
+        function(){
+          console.log("nope");
+        });
+
+      return success;
+    }
+
+    
   }
 }
 

@@ -34,14 +34,15 @@ div{
     padding-right:2.3em;
 }
 
+#leftWell, #rightWell{
+	flex: 1 100%;
+}
+
 #leftWell{
-	width: 70%;
 	padding: 0 20px 0 2.3em;
 }
 
 #rightWell{
-	width: 30%;
-	background: #ccc;
 	padding-right: 10px;
 }
 
@@ -108,11 +109,10 @@ h2.dogName{
     min-height: 200px;
     width:23%;
     height:15vw;
+
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 2.3em;
-    	display: flex;
-	flex-wrap: wrap;
 }
 img {
     max-width:100%;
@@ -134,5 +134,16 @@ img {
     text-transform: uppercase!important;
     display:inline;
     position: relative;
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+	#leftWell{
+		flex: 2;
+	}
+
+	#rightWell{
+		flex: 1;
+	}
 }
 

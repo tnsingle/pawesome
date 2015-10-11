@@ -1,5 +1,8 @@
 <head>
-  <title>pawesome</title>
+  	<title>pawesome</title>
+
+  	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -9,7 +12,8 @@
 	</header>
   	<div id="container">
   		<div id="leftWell">
-  			<div class="map">
+  			<div id="paw-map" class="map" data-map-loaded="{{mapLoaded}}">
+  				<p>Please enable location tracking...</p>
   			</div>
   			{{#if currentUser}}
          		<div class="userInfo">
